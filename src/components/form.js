@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const FormWrapper = () => {
   const formFieldArr = [
@@ -133,14 +134,11 @@ const FormWrapper = () => {
             />
           </Form.Group>
         </Form>
-        <Button
-          variant='primary'
-          type='submit'
-          onClick={handleSubmit}
-          href='/success'
-        >
-          Submit
-        </Button>
+        <Link to='/success'>
+          <Button variant='primary' type='submit' onClick={handleSubmit}>
+            Submit
+          </Button>
+        </Link>
         <Button variant='primary' href='/success'>
           Finished
         </Button>

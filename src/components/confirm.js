@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Col, Container, Row } from 'react-bootstrap';
+import EditButton from './editBtn';
 
 function Confirm() {
   const [input, setInput] = useState({});
@@ -56,6 +57,7 @@ function Confirm() {
                 </tr>
               </tbody>
             </Table>
+            <EditButton />
           </Col>
           <Col></Col>
         </Row>
