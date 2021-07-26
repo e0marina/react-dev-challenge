@@ -69,6 +69,7 @@ const FormWrapper = () => {
     facebook: '',
     instagram: '',
     imageurl: '',
+    textarea: '',
   };
   const [eachEntry, setEachEntry] = useState(initialInputState);
   const {
@@ -81,14 +82,19 @@ const FormWrapper = () => {
     facebook,
     instagram,
     imageurl,
+    textarea,
   } = eachEntry;
 
   const handleInputChange = (e) => {
     setEachEntry({ ...eachEntry, [e.target.name]: e.target.value });
   };
 
+  const [checked, setChecked] = useState(false);
+  const handleCheckClick = () => setChecked(!checked);
+
   const handleSubmit = (e) => {
     console.log(eachEntry);
+    console.log(checked);
   };
 
   return (
@@ -108,10 +114,24 @@ const FormWrapper = () => {
               />
             </Form.Group>
           ))}
+          <Form.Group className='mb-3' controlId='exampleForm.ControlTextarea1'>
+            <Form.Label>Additional Information</Form.Label>
+            <Form.Control
+              as='textarea'
+              rows={5}
+              name='textarea'
+              onChange={handleInputChange}
+            />
+          </Form.Group>
+          <Form.Group className='mb-3' controlId='formBasicCheckbox'>
+            <Form.Check
+              name='checkbox'
+              type='checkbox'
+              onClick={handleCheckClick}
+              label='By checking this box, you acknowledge you are at least 18 years of age.'
+            />
+          </Form.Group>
         </Form>
-        <Form.Group className='mb-3' controlId='formBasicCheckbox'>
-          <Form.Check type='checkbox' label='Check me out' />
-        </Form.Group>
         <Button variant='primary' type='submit' onClick={handleSubmit}>
           Submit
         </Button>
