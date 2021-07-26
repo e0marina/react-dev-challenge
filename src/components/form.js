@@ -58,17 +58,44 @@ const FormWrapper = () => {
       name: 'imageurl',
     },
   ];
-  const [fieldState, setFieldState] = useState([]);
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    console.log(fieldState);
-    console.log('this worked');
+
+  const initialInputState = {
+    firstname: '',
+    lastname: '',
+    email: '',
+    state: '',
+    party: '',
+    twitter: '',
+    facebook: '',
+    instagram: '',
+    imageurl: '',
   };
+  const [eachEntry, setEachEntry] = useState(initialInputState);
+  const {
+    firstname,
+    lastname,
+    email,
+    state,
+    party,
+    twitter,
+    facebook,
+    instagram,
+    imageurl,
+  } = eachEntry;
+
+  const handleInputChange = (e) => {
+    setEachEntry({ ...eachEntry, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    console.log(eachEntry);
+  };
+
   return (
     <>
       <Col></Col>
       <Col>
-        <Form onSubmit={handleFormSubmit}>
+        <Form>
           {formFieldArr.map((field, idx) => (
             <Form.Group className='mb-3' controlId={field.id} key={idx}>
               <Form.Label>{field.label}</Form.Label>
@@ -77,7 +104,7 @@ const FormWrapper = () => {
                 type='text'
                 name={field.name}
                 placeholder={field.placeholder}
-                onChange={(e) => setFieldState(e.target.value)}
+                onChange={handleInputChange}
               />
             </Form.Group>
           ))}
@@ -85,7 +112,7 @@ const FormWrapper = () => {
         <Form.Group className='mb-3' controlId='formBasicCheckbox'>
           <Form.Check type='checkbox' label='Check me out' />
         </Form.Group>
-        <Button variant='primary' type='submit'>
+        <Button variant='primary' type='submit' onClick={handleSubmit}>
           Submit
         </Button>
       </Col>
