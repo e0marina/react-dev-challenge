@@ -94,6 +94,7 @@ const FormWrapper = () => {
 
   const handleSubmit = (e) => {
     console.log(eachEntry);
+    localStorage.setItem('candidate', JSON.stringify(eachEntry));
     console.log(checked);
   };
 
@@ -132,8 +133,19 @@ const FormWrapper = () => {
             />
           </Form.Group>
         </Form>
-        <Button variant='primary' type='submit' onClick={handleSubmit}>
+        <Button
+          variant='primary'
+          type='submit'
+          onClick={handleSubmit}
+          href='/success'
+        >
           Submit
+        </Button>
+        <Button variant='primary' href='/success'>
+          Finished
+        </Button>
+        <Button variant='primary' href='/listall'>
+          List All
         </Button>
       </Col>
       <Col></Col>

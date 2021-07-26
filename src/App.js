@@ -1,10 +1,15 @@
 import MainWrapper from './components/mainWrapper';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+//import './App.css';
 
 function App() {
   return (
     <div className='App'>
-      <MainWrapper />
+      <Router>
+        <Switch>
+          <Route exact path='/' component={MainWrapper} />
+        </Switch>
+      </Router>
     </div>
   );
 }
