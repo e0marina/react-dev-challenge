@@ -6,13 +6,13 @@ const FormWrapper = () => {
   const formFieldArr = [
     {
       id: 'formBasicFirstName',
-      label: 'First Name',
+      label: 'First Name *',
       placeholder: 'First Name',
       name: 'firstname',
     },
     {
       id: 'formBasicLastName',
-      label: 'Last Name',
+      label: 'Last Name *',
       placeholder: 'Last Name',
       name: 'lastname',
     },
@@ -73,6 +73,7 @@ const FormWrapper = () => {
     textarea: '',
   };
   const [eachEntry, setEachEntry] = useState(initialInputState);
+
   const {
     firstname,
     lastname,
@@ -103,10 +104,10 @@ const FormWrapper = () => {
     <>
       <Col></Col>
       <Col>
-        <Form>
+        <Form className='form-body'>
           {formFieldArr.map((field, idx) => (
             <Form.Group className='mb-3' controlId={field.id} key={idx}>
-              <Form.Label>{field.label}</Form.Label>
+              <Form.Label className='form-label'>{field.label}</Form.Label>
               <Form.Control
                 size='sm'
                 type='text'
@@ -127,6 +128,7 @@ const FormWrapper = () => {
           </Form.Group>
           <Form.Group className='mb-3' controlId='formBasicCheckbox'>
             <Form.Check
+              className='check'
               name='checkbox'
               type='checkbox'
               onClick={handleCheckClick}

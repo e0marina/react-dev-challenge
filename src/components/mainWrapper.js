@@ -1,11 +1,15 @@
 import React from 'react';
-import FormWrapper from './form';
 import { Container, Row } from 'react-bootstrap';
+import Header from './header';
+import SubHeader from './subHeader';
+import FormWrapper from './form';
 
 const MainWrapper = () => {
   return (
     <>
-      <Container>
+      <Container fluid className='container'>
+        <Header />
+        <SubHeader />
         <Row>
           <FormWrapper />
         </Row>
