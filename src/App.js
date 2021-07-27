@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MainWrapper from './components/mainWrapper';
 import Confirm from './components/confirm';
 import Success from './components/success';
-//import './App.css';
+import './App.css';
 
 function App() {
   return (

@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 import Header from './header';
 import SubHeader from './subHeader';
 import FormWrapper from './form';
+import Footer from './footer';
 
 const MainWrapper = () => {
   return (
@@ -13,6 +14,7 @@ const MainWrapper = () => {
         <Row>
           <FormWrapper />
         </Row>
+        <Footer />
       </Container>
     </>
   );

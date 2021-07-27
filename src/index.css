@@ -7,6 +7,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #000 !important;
 }
+.footer,
+.header {
+  max-width: 1004px;
+}
+.header-img {
+  margin: 0 auto;
+  height: 551px;
+  width: 1004px;
+}
+
+.footer {
+  position: absolute;
+  top: 1924px;
+  right: -434px;
+  height: 238px;
+  width: 1004px;
+}
+
 .sub-header {
   position: absolute;
   left: 630px;
