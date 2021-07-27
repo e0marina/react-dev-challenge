@@ -69,7 +69,7 @@ function Confirm() {
         <Row className='confirm-btn-group'>
           <Col lg='3'></Col>
           <Col lg='2'>
-            <Link to='/confirm'>
+            <Link to='/finish'>
               <Button className='btn' variant='success' type='submit'>
                 CONFIRM
               </Button>

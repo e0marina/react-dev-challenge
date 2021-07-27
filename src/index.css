@@ -77,7 +77,9 @@ span {
   font-style: normal;
   font-weight: 500;
 }
-
+.thank-span {
+  left: 540px;
+}
 .form-body {
   position: absolute;
   left: 515px;
@@ -96,6 +98,9 @@ span {
 }
 .confirm-btn-group {
   margin-top: 20px !important;
+}
+.finish-btn-group {
+  margin-top: 250px !important;
 }
 .btn {
   height: 38px !important;
