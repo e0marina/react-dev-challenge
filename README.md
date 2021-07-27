@@ -1,6 +1,6 @@
 # Form Flow for React Challenge
 
-This is a web form created with React that allows a user to input a political candidate's information, edit it, and submit it. 
+This is a web form created with React that allows a user to input a political candidate's information, edit it, and submit it.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -22,7 +22,17 @@ Figma,
 localStorage,
 React Router
 
-##Video for seeing a quick demo: 
+## Design Decisions
+
+I based the design off of the Figma here: https://www.figma.com/proto/Nag24QhA8LMk7Pm7r8GciY/Web-Developer-s:-Project-Challen[…]3A5216&starting-point-node-id=2534%3A8527&show-proto-sidebar=1
+
+I used bootstrap so you'll notice small variations in the design because of that. I used local storage and did not build out a back end because of time constraints that I have in my personal life.
+
+## Thoughts on Complexity
+
+I'd say for the purpose of a rapid prototype - it was moderately complex and the true level of complexity if this were a real app would depend on additional requirements from the client (ie does any of the info need to be hashed when storing personal data into the database).
+
+##Video for seeing a quick demo:
 https://drive.google.com/file/d/1Qy4CsQSfsFX-LEfgeMcYlCLR7jQoqliE/view
 
 ##Some Screenshots
