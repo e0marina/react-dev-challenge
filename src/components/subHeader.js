@@ -5,7 +5,6 @@ function SubHeader() {
   return (
     <>
       <Row>
-        {/* <Col></Col> */}
         <Col className='sub-header'>
           <h3 className='sub-header-text'>
             Reimagining Political Connectivity
@@ -19,7 +18,6 @@ function SubHeader() {
           </h5>
           <h6> Tell us about your local official </h6>
         </Col>
-        {/* <Col></Col> */}
       </Row>
     </>
   );

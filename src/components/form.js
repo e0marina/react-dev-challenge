@@ -136,17 +136,24 @@ const FormWrapper = () => {
             />
           </Form.Group>
         </Form>
-        <Link to='/success'>
-          <Button variant='primary' type='submit' onClick={handleSubmit}>
-            Submit
+        <div className='btn-group'>
+          <Link to='/success'>
+            <Button
+              className='btn'
+              variant='primary'
+              type='submit'
+              onClick={handleSubmit}
+            >
+              SUBMIT
+            </Button>
+          </Link>
+          <Button className='btn' variant='primary' href='/success'>
+            FINISHED
           </Button>
-        </Link>
-        <Button variant='primary' href='/success'>
-          Finished
-        </Button>
-        <Button variant='primary' href='/listall'>
-          List All
-        </Button>
+          <Button className='btn' variant='primary' href='/listall'>
+            LIST ALL
+          </Button>
+        </div>
       </Col>
       <Col></Col>
     </>

@@ -19,7 +19,7 @@ h3 {
   font-size: 40px;
   line-height: 64px;
   width: 1203px;
-  height: 105px;
+  height: 80px;
 }
 h5 {
   color: #ffff;
@@ -51,7 +51,23 @@ h6 {
 .form-label {
   color: #ffff;
 }
-
+.btn-group {
+  left: -35px;
+  top: 1270px;
+}
+.btn {
+  height: 38px !important;
+  width: 172px !important;
+  border-radius: 31px !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800 !important;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 0px 25px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
