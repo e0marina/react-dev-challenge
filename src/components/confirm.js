@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Col, Container, Row } from 'react-bootstrap';
-import EditButton from './editBtn';
+//import EditButton from './editBtn';
+import Header from './header';
+import SubHeader from './subHeader';
+import Footer from './footer';
 
 function Confirm() {
   const [input, setInput] = useState({});
 
   useEffect(() => {
-    //console.log(JSON.parse(localStorage.getItem('candidate')));
     const localInput = JSON.parse(localStorage.getItem('candidate'));
     setInput(localInput);
   }, []);
 
   return (
     <>
-      <Container>
+      <Container fluid className='container'>
+        <Header />
+        <SubHeader />
         <Row>
           <Col></Col>
-          <Col>
+          <span>CONFIRMATION</span>
+          <Col className='table-style'>
             <Table borderless size='sm'>
               <tbody>
                 <tr>
@@ -57,10 +62,11 @@ function Confirm() {
                 </tr>
               </tbody>
             </Table>
-            <EditButton />
           </Col>
+          {/* <EditButton /> */}
           <Col></Col>
         </Row>
+        <Footer />
       </Container>
     </>
   );

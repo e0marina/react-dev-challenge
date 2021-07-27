@@ -7,9 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #000 !important;
 }
+.container,
 .footer,
 .header {
   max-width: 1004px;
+  justify-content: center !important;
 }
 .header-img {
   margin: 0 auto;
@@ -20,15 +22,18 @@ body {
 .footer {
   position: absolute;
   top: 1924px;
-  right: -434px;
+  right: -315px;
   height: 238px;
   width: 1004px;
 }
 
 .sub-header {
   position: absolute;
-  left: 630px;
+  left: 504px;
   top: 585px;
+}
+.sub-text {
+  margin-top: 83px;
 }
 h3 {
   color: #ff6600;
@@ -42,6 +47,7 @@ h3 {
 h5 {
   color: #ffff;
   font-family: 'Montserrat', sans-serif;
+  margin-top: 83px;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -60,9 +66,21 @@ h6 {
   letter-spacing: 0em;
   text-align: left;
 }
+
+span {
+  position: absolute;
+  left: 504px;
+  top: 700px;
+  color: #ffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+}
+
 .form-body {
   position: absolute;
-  left: 642px;
+  left: 515px;
   top: 859px;
 }
 .check,
@@ -85,6 +103,14 @@ h6 {
   letter-spacing: 0em;
   text-align: center;
   margin: 0px 25px;
+}
+
+.table-style {
+  background-color: #ffff;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 250px 270px 0px 0px !important;
+  height: 364px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
