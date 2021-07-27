@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Col, Container, Row } from 'react-bootstrap';
-//import EditButton from './editBtn';
+import { Table, Col, Container, Row, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import EditButton from './editBtn';
 import Header from './header';
 import SubHeader from './subHeader';
 import Footer from './footer';
@@ -20,7 +21,7 @@ function Confirm() {
         <SubHeader />
         <Row>
           <Col></Col>
-          <span>CONFIRMATION</span>
+          <span className='confirm-span'>CONFIRMATION</span>
           <Col className='table-style'>
             <Table borderless size='sm'>
               <tbody>
@@ -63,8 +64,21 @@ function Confirm() {
               </tbody>
             </Table>
           </Col>
-          {/* <EditButton /> */}
           <Col></Col>
+        </Row>
+        <Row className='confirm-btn-group'>
+          <Col lg='3'></Col>
+          <Col lg='2'>
+            <Link to='/confirm'>
+              <Button className='btn' variant='success' type='submit'>
+                CONFIRM
+              </Button>
+            </Link>
+          </Col>
+          <Col lg='2'>
+            <EditButton />
+          </Col>
+          <Col lg='5'></Col>
         </Row>
         <Footer />
       </Container>

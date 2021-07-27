@@ -1,17 +1,19 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 function EditButton() {
   let history = useHistory();
 
-  function handleClick() {
+  function handleBtnClick() {
     history.go(-2);
+    window.scrollTo(0, 0);
   }
 
   return (
-    <button type='button' onClick={handleClick}>
-      Edit
-    </button>
+    <Button id='white-btn' type='button' onClick={handleBtnClick}>
+      EDIT
+    </Button>
   );
 }
 

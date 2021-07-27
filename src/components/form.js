@@ -95,9 +95,8 @@ const FormWrapper = () => {
   const handleCheckClick = () => setChecked(!checked);
 
   const handleSubmit = (e) => {
-    console.log(eachEntry);
     localStorage.setItem('candidate', JSON.stringify(eachEntry));
-    console.log(checked);
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -140,17 +139,19 @@ const FormWrapper = () => {
           <Link to='/success'>
             <Button
               className='btn'
-              variant='primary'
+              variant='success'
               type='submit'
               onClick={handleSubmit}
             >
               SUBMIT
             </Button>
           </Link>
-          <Button className='btn' variant='primary' href='/success'>
-            FINISHED
-          </Button>
-          <Button className='btn' variant='primary' href='/listall'>
+          <Link to='/finish'>
+            <Button className='btn' id='white-btn'>
+              FINISHED
+            </Button>
+          </Link>
+          <Button className='btn' id='orange-btn'>
             LIST ALL
           </Button>
         </div>

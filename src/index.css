@@ -91,6 +91,12 @@ span {
   left: -35px;
   top: 1270px;
 }
+.success-btn-group {
+  margin: 250px 0px 0px 300px;
+}
+.confirm-btn-group {
+  margin-top: 20px !important;
+}
 .btn {
   height: 38px !important;
   width: 172px !important;
@@ -98,20 +104,33 @@ span {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-style: normal;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
   line-height: 22px;
   letter-spacing: 0em;
   text-align: center;
   margin: 0px 25px;
 }
+#white-btn {
+  background-color: #ffff;
+  border-color: #ffff;
+  color: black;
+}
+#orange-btn {
+  background-color: #ff6600;
+  border-color: #ff6600;
+}
 
+.confirm-span {
+  margin-left: 25px;
+}
 .table-style {
   background-color: #ffff;
   border-radius: 6px;
   padding: 20px;
-  margin: 250px 270px 0px 0px !important;
+  margin: 250px 210px 0px 0px !important;
   height: 364px;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
