@@ -24,3 +24,6 @@ React Router
 
 ##Video for seeing a quick demo: 
 https://drive.google.com/file/d/1Qy4CsQSfsFX-LEfgeMcYlCLR7jQoqliE/view
+
+##Some Screenshots
+![Screen Shot 2021-07-27 at 4 14 23 PM](https://user-images.githubusercontent.com/30880308/127239366-3b8f7625-b2d0-4318-a54e-1d3210601962.png)
