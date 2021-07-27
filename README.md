@@ -26,7 +26,7 @@ React Router
 
 I based the design off of the Figma here: https://www.figma.com/proto/Nag24QhA8LMk7Pm7r8GciY/Web-Developer-s:-Project-Challen[…]3A5216&starting-point-node-id=2534%3A8527&show-proto-sidebar=1
 
-I used bootstrap so you'll notice small variations in the design because of that. I used local storage and did not build out a back end because of time constraints that I have in my personal life.
+I used bootstrap so you'll notice small variations in the design because of that. I used local storage and did not build out a back end nor make this responsive for screen sizes less than lg/xl desktop width, because of time constraints that I have in my personal life (I work part time, volunteer, am interviewing elsewhere for dev work, and have a small child).
 
 ## Thoughts on Complexity
 
