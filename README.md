@@ -15,11 +15,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Technology Used
 
-React.js
-React Bootstrap
-Google Fonts
-Figma
-localStorage
+React.js,
+React Bootstrap,
+Google Fonts,
+Figma,
+localStorage,
 React Router
 
 ##Video for seeing a quick demo: 
