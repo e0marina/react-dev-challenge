@@ -3,20 +3,21 @@ import { Container, Row } from 'react-bootstrap';
 import Header from './header';
 import SubHeader from './subHeader';
 import SubText from './subText';
-import Form from './form';
+// import Form from './form';
+import ValidatedForm from './validatedForm';
 import Footer from './footer';
 
 const FormWrapper = () => {
   return (
     <>
       <Container fluid className='container'>
-        <Header />
+        {/* <Header />
         <SubHeader />
-        <SubText />
+        <SubText /> */}
         <Row>
-          <Form />
+          <ValidatedForm />
         </Row>
-        <Footer />
+        {/* <Footer /> */}
       </Container>
     </>
   );
