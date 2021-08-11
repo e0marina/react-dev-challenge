@@ -12,13 +12,27 @@ const FormWrapper = () => {
     if (!values.lastName) {
       errors.lastName = 'Last Name is required';
     }
+    if (!values.acceptTerms === true) {
+      errors.acceptTerms = 'This box needs to be checked';
+    }
 
     return errors;
   };
+  const MySpecialField = ({ field }) => {
+    return (
+      <label className='form-check-label'>
+        <input {...field} type='checkbox' />
+        <span id='check-span'>
+          By checking this box, you acknowledge you are at least 18 years of
+          age.
+        </span>
+      </label>
+    );
+  };
   return (
     <>
-      <div className='col-3'></div>
-      <div className='col-6 form-body'>
+      <div className='col-6'></div>
+      <div className='col-4 form-body'>
         <Formik
           initialValues={{
             firstName: '',
@@ -31,15 +45,15 @@ const FormWrapper = () => {
             instagram: '',
             imageurl: '',
             content: '',
+            acceptTerms: false,
           }}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               localStorage.setItem('candidate', JSON.stringify(values));
               window.location.href = '/success';
               window.scrollTo(0, 0);
-              // alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
-            }, 1000);
+            }, 500);
           }}
           validate={validateForm}
         >
@@ -166,7 +180,24 @@ const FormWrapper = () => {
                 <label className='form-label' htmlFor='content'>
                   Additional Information
                 </label>
-                <Field name='content' className='form-control' as='textarea' />
+                <Field
+                  name='content'
+                  className='form-control'
+                  as='textarea'
+                  rows='10'
+                />
+              </div>
+              <div class='form-check'>
+                <Field
+                  name='acceptTerms'
+                  type='checkbox'
+                  component={MySpecialField}
+                  className={
+                    formik.touched.acceptTerms && formik.errors.acceptTerms
+                      ? 'form-control is-invalid'
+                      : 'form-control'
+                  }
+                />
               </div>
               <div className='btn-group'>
                 <div className='form-group'>
@@ -191,7 +222,7 @@ const FormWrapper = () => {
           )}
         </Formik>
       </div>
-      <div className='col-3'></div>
+      <div className='col-2'></div>
     </>
   );
 };
