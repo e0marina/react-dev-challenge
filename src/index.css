@@ -85,13 +85,28 @@ span {
   left: 515px;
   top: 859px;
 }
-.check,
+#check-span {
+  position: initial;
+  margin-left: 5px;
+}
+#check-span,
 .form-label {
   color: #ffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.form-control {
+  margin-bottom: 60px;
 }
 .btn-group {
   left: -35px;
-  top: 1270px;
+  top: 50px;
 }
 .success-btn-group {
   margin: 250px 0px 0px 300px;

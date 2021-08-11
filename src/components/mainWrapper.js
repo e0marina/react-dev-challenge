@@ -4,7 +4,7 @@ import Header from './header';
 import SubHeader from './subHeader';
 import SubText from './subText';
 import Form from './form';
-import Footer from './footer';
+// import Footer from './footer';
 
 const FormWrapper = () => {
   return (
@@ -16,7 +16,7 @@ const FormWrapper = () => {
         <Row>
           <Form />
         </Row>
-        <Footer />
+        {/* <Footer /> */}
       </Container>
     </>
   );
