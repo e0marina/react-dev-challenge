@@ -16,7 +16,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## Technology Used
 
 React.js,
-React Bootstrap,
+Bootstrap,
+Formik,
 Google Fonts,
 Figma,
 localStorage,
@@ -30,7 +31,7 @@ I used bootstrap so you'll notice small variations in the design because of that
 
 ## Thoughts on Complexity
 
-I'd say for the purpose of a rapid prototype - it was moderately complex and the true level of complexity if this were a real app would depend on additional requirements from the client (ie does any of the info need to be hashed when storing personal data into the database).
+I'd say for the purpose of a rapid prototype - it was moderately complex and the true level of complexity if this were a real app would depend on additional requirements from the client (ie does any of the info need to be encrypted when storing personal data into the database).
 
 ##Video for seeing a quick demo:
 https://drive.google.com/file/d/1Qy4CsQSfsFX-LEfgeMcYlCLR7jQoqliE/view
