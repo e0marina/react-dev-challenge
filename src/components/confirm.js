@@ -27,11 +27,11 @@ function Confirm() {
               <tbody>
                 <tr>
                   <td>First Name:</td>
-                  <td>{input.firstname}</td>
+                  <td>{input.firstName}</td>
                 </tr>
                 <tr>
                   <td>Last Name:</td>
-                  <td>{input.lastname}</td>
+                  <td>{input.lastName}</td>
                 </tr>
                 <tr>
                   <td>State:</td>

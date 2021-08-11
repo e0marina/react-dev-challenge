@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const FormWrapper = () => {
@@ -34,14 +34,12 @@ const FormWrapper = () => {
           }}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+              localStorage.setItem('candidate', JSON.stringify(values));
+              window.location.href = '/success';
+              window.scrollTo(0, 0);
+              // alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
             }, 1000);
-            // if (values.firstName && values.lastName) {
-            //   console.log(values);
-            // } else {
-            //   console.log('required');
-            // }
           }}
           validate={validateForm}
         >
@@ -52,6 +50,7 @@ const FormWrapper = () => {
                   First Name*
                 </label>
                 <Field
+                  placeholder='First Name'
                   name='firstName'
                   className={
                     formik.touched.firstName && formik.errors.firstName
@@ -60,7 +59,6 @@ const FormWrapper = () => {
                   }
                   type='text'
                 />
-
                 {formik.touched.firstName && formik.errors.firstName ? (
                   <div className='invalid-feedback'>
                     {formik.errors.firstName}
@@ -73,6 +71,7 @@ const FormWrapper = () => {
                 </label>
                 <Field
                   name='lastName'
+                  placeholder='Last Name'
                   className={
                     formik.touched.lastName && formik.errors.lastName
                       ? 'form-control is-invalid'
@@ -80,7 +79,6 @@ const FormWrapper = () => {
                   }
                   type='text'
                 />
-
                 {formik.touched.lastName && formik.errors.lastName ? (
                   <div className='invalid-feedback'>
                     {formik.errors.lastName}
@@ -91,43 +89,78 @@ const FormWrapper = () => {
                 <label className='form-label' htmlFor='email'>
                   Email
                 </label>
-                <Field name='email' className='form-control' type='text' />
+                <Field
+                  name='email'
+                  placeholder='Email'
+                  className='form-control'
+                  type='text'
+                />
               </div>
               <div className='form-group'>
                 <label className='form-label' htmlFor='state'>
                   State
                 </label>
-                <Field name='state' className='form-control' type='text' />
+                <Field
+                  name='state'
+                  placeholder='State'
+                  className='form-control'
+                  type='text'
+                />
               </div>
               <div className='form-group'>
                 <label className='form-label' htmlFor='party'>
                   Party
                 </label>
-                <Field name='party' className='form-control' type='text' />
+                <Field
+                  name='party'
+                  placeholder='State'
+                  className='form-control'
+                  type='text'
+                />
               </div>
               <div className='form-group'>
                 <label className='form-label' htmlFor='twitter'>
                   Twitter
                 </label>
-                <Field name='twitter' className='form-control' type='text' />
+                <Field
+                  name='twitter'
+                  placeholder='Twitter'
+                  className='form-control'
+                  type='text'
+                />
               </div>
               <div className='form-group'>
                 <label className='form-label' htmlFor='facebook'>
                   Facebook
                 </label>
-                <Field name='facebook' className='form-control' type='text' />
+                <Field
+                  name='facebook'
+                  placeholder='Facebook'
+                  className='form-control'
+                  type='text'
+                />
               </div>
               <div className='form-group'>
                 <label className='form-label' htmlFor='instagram'>
                   Instagram
                 </label>
-                <Field name='instagram' className='form-control' type='text' />
+                <Field
+                  name='instagram'
+                  placeholder='Instagram'
+                  className='form-control'
+                  type='text'
+                />
               </div>
               <div className='form-group'>
                 <label className='form-label' htmlFor='imageurl'>
                   Image URL
                 </label>
-                <Field name='imageurl' className='form-control' type='text' />
+                <Field
+                  name='imageurl'
+                  placeholder='Image URL'
+                  className='form-control'
+                  type='text'
+                />
               </div>
               <div className='form-group'>
                 <label className='form-label' htmlFor='content'>
@@ -135,37 +168,25 @@ const FormWrapper = () => {
                 </label>
                 <Field name='content' className='form-control' as='textarea' />
               </div>
-              <div className='form-group'>
-                <button
-                  type='submit'
-                  className='btn btn-primary'
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Please wait...' : 'Submit'}
+              <div className='btn-group'>
+                <div className='form-group'>
+                  <button
+                    type='submit'
+                    className='btn btn-success'
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Please wait...' : 'SUBMIT'}
+                  </button>
+                </div>
+                <Link to='/finish'>
+                  <button className='btn' id='white-btn'>
+                    FINISHED
+                  </button>
+                </Link>
+                <button className='btn' id='orange-btn'>
+                  LIST ALL
                 </button>
               </div>
-
-              {/* < div className='btn-group'>
-                <Link to='/success'>
-                  <Button
-                    className='btn'
-                    variant='success'
-                    type='submit'
-                    onClick={handleSubmit}
-                  >
-                    SUBMIT
-                  </Button>
-                </Link>
-
-                <Link to='/finish'>
-                  <Button className='btn' id='white-btn'>
-                    FINISHED
-                  </Button>
-                </Link>
-                <Button className='btn' id='orange-btn'>
-                  LIST ALL
-                </Button>
-              </div> */}
             </Form>
           )}
         </Formik>
